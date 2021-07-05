@@ -1,0 +1,69 @@
+/* 全局样式 */
+* {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  color: red;
+}
+p {
+  color: #000;
+}
+
+.button {
+  white-space: nowrap;
+  font-weight: bold;
+  color: #fff;
+  outline: none;
+  border: none;
+  min-width: 100px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.3s !important;
+}
+.button:hover {
+  transform: translateY(-2px);
+}
+.buttonPrimary {
+  background: #f26a2e;
+}
+.buttonPrimary:hover {
+  background: #077bf1;
+}
+.buttonNoPrimary {
+  background: #077bf1;
+}
+.buttonNoPrimary:hover {
+  background: #f26a2e;
+}
+.buttonBig {
+  padding: 16px 40px;
+  font-size: 20px;
+}
+.buttonNoBig {
+  padding: 10px 32px;
+  font-size: 16px;
+}
+.buttonRound {
+  border-radius: 50px;
+}
+.buttonNoRound {
+  border-radius: 4px;
+}
+.icon {
+  font-size: 1.4rem !important;
+}
+.color1 {
+  color: #047bf1;
+}
+.color2 {
+  color: #f3a82e;
+}
+.color3 {
+  color: #f34f2e;
+}
+.color4 {
+  color: #3af576;
+}

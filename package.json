@@ -1,0 +1,40 @@
+{
+  "name": "travel_website_based_on_rax_and_ts",
+  "author": "LingMu🎈",
+  "description": "基于 Rax.js 和 Ts 的旅游网址",
+  "version": "0.1.0",
+  "scripts": {
+    "start": "rax-app start --mode local",
+    "build:daily": "rax-app build --mode daily",
+    "build": "rax-app build --mode prod",
+    "eslint": "eslint --ext .js,.jsx,.tsx,.ts ./",
+    "stylelint": "stylelint \"**/*.{css,scss,less}\"",
+    "prettier": "prettier **/* --write",
+    "lint": "npm run eslint && npm run stylelint"
+  },
+  "dependencies": {
+    "@alifd/meet": "^2.3.7",
+    "rax": "^1.1.0",
+    "rax-document": "^0.1.0",
+    "rax-image": "^2.0.0",
+    "rax-link": "^1.0.1",
+    "rax-text": "^2.0.0",
+    "rax-textinput": "^1.3.9",
+    "rax-view": "^2.0.0"
+  },
+  "devDependencies": {
+    "@iceworks/spec": "^1.0.0",
+    "@types/rax": "^1.0.0",
+    "eslint": "^6.8.0",
+    "prettier": "^2.1.2",
+    "rax-app": "^3.0.0",
+    "stylelint": "^13.7.2"
+  },
+  "private": true,
+  "originTemplate": "@rax-materials/scaffolds-app-ts",
+  "eslintConfig": {
+    "rules": {
+      "no-console": "off"
+    }
+  }
+}

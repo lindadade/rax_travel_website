@@ -1,0 +1,71 @@
+.emailContainer {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(0, 0, 0, 0.5) 35%,
+    rgba(0, 0, 0, 0.1) 100%
+  ),
+    url('../../assets/images/21063001.jpeg') no-repeat center;
+  background-size: cover;
+  height: 650px;
+  width: 100%;
+  padding: 5rem calc((100vw - 1300px) / 2);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.emailContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.emailH1 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: clamp(1rem, 5vw, 3rem);
+  padding: 0 1rem;
+}
+
+.emailP {
+  text-align: center;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  padding: 0 1rem;
+  margin-bottom: 2rem;
+  color: #fff;
+}
+
+form {
+  z-index: 10;
+}
+
+input {
+  padding: 1rem 1.5rem;
+  outline: none;
+  width: 450px;
+  height: 60px;
+  border-radius: 50px;
+  border: none;
+  margin-right: 1rem;
+}
+@media screen and (max-width: 768px) {
+  .formWrap {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+  }
+  input {
+    margin-bottom: 1rem;
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .button {
+    width: 100%;
+    min-width: 450px;
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "targets": ["web"],
+  "eslint": true,
+  "plugins": [],
+  "publicPath": "./",
+  "modeConfig": {
+    "prod": {
+      "define": {},
+      "outputDir": "prodDist",
+      "minify": false
+    },
+    "daily": {
+      "define": {},
+      "outputDir": "dailyDist"
+    }
+  }
+}
