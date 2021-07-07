@@ -1,0 +1,22 @@
+ol, ul {
+  padding-left: 30px;
+}
+
+.status {
+  margin-bottom: 10px;
+}
+
+.game {
+  margin-top: 20vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.gameInfo {
+  margin-left: 20px;
+}
+
+.gameBoard {
+  color: #fff;
+}
