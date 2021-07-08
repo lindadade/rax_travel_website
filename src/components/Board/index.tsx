@@ -4,25 +4,25 @@ import Square from '../Square';
 import styles from './index.module.css';
 
 function Board() {
-  const renderSquare = (i) => {
-    return <Square value={i} />;
+  const renderSquare = () => {
+    return <Square />;
   };
   return (
     <View>
       <div className={styles.boardRow}>
-        {renderSquare(0)}
-        {renderSquare(1)}
-        {renderSquare(2)}
+        {renderSquare()}
+        {renderSquare()}
+        {renderSquare()}
       </div>
       <div className={styles.boardRow}>
-        {renderSquare(3)}
-        {renderSquare(4)}
-        {renderSquare(5)}
+        {renderSquare()}
+        {renderSquare()}
+        {renderSquare()}
       </div>
       <div className={styles.boardRow}>
-        {renderSquare(6)}
-        {renderSquare(7)}
-        {renderSquare(8)}
+        {renderSquare()}
+        {renderSquare()}
+        {renderSquare()}
       </div>
     </View>
   );
