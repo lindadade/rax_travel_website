@@ -1,10 +1,11 @@
-import { createElement } from 'rax';
+import { createElement, useState } from 'rax';
 import styles from './index.module.css';
 
-function Square(props) {
+function Square() {
+  const [value, setValue] = useState('');
   return (
-    <button className={styles.square} onClick={props.onClick}>
-      {props.value}
+    <button className={styles.square} onClick={() => setValue('X')}>
+      {value}
     </button>
   );
 }
