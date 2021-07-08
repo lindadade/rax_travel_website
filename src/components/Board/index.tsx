@@ -5,13 +5,15 @@ import styles from './index.module.css';
 
 function Board() {
   const [squares, setSquares] = useState(Array(9).fill(null));
+  const [xIsNext, setXIsNext] = useState(true);
 
-  const status = 'Next player: X';
+  const status = `Next player: ${xIsNext ? 'X' : 'O'}`;
 
   const handleClick = (i) => {
     const square = [...squares];
-    square[i] = 'X';
+    square[i] = xIsNext ? 'X' : 'O';
     setSquares(square);
+    setXIsNext(!xIsNext);
   };
 
   const renderSquare = (i) => {
