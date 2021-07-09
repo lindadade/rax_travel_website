@@ -28,7 +28,7 @@ function Gobang() {
   };
 
   // 历史跳转
-  const jumpTo = (step) => {
+  const jumpTo = (step: number) => {
     setStepNumber(step);
     setXIsNext(step % 2 === 0);
   };
