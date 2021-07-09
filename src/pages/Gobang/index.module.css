@@ -16,3 +16,10 @@ ol, ul {
 .gameBoard {
   color: #fff;
 }
+
+.status {
+  width: 120px;
+  margin-bottom: 15px;
+  color: cadetblue;
+  font-size: 18px;
+}
