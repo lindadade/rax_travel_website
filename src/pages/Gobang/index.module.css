@@ -1,5 +1,13 @@
 ol, ul {
   padding-left: 30px;
+  font-size: 18px;
+}
+li {
+  height: 30px;
+}
+li > button {
+  font-size: 16px;
+  width: 150px;
 }
 
 .game {
@@ -18,8 +26,8 @@ ol, ul {
 }
 
 .status {
-  width: 120px;
+  width: 260px;
   margin-bottom: 15px;
   color: cadetblue;
-  font-size: 18px;
+  font-size: 24px;
 }
