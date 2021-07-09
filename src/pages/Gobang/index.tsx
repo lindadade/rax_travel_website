@@ -3,6 +3,7 @@ import View from 'rax-view';
 import Board from '@/components/Board';
 import styles from './index.module.css';
 import { calculateWinner } from '@/utils';
+import { history as router } from 'rax-app';
 
 function Gobang() {
   const [history, setHistory] = useState([
@@ -59,13 +60,18 @@ function Gobang() {
 
   return (
     <View>
-      <div className={styles.game}>
-        <div className={styles.gameBoard}>
-          <Board squares={current.squares} onClick={(i) => handleClick(i)} />
+      <div c>
+        <div style={{ textAlign: 'center' }} className="button buttonPrimary buttonBig buttonNoRound" onClick={() => router.push('/')}>
+          返回旅游页面
         </div>
-        <div className={styles.gameInfo}>
-          <div className={styles.status}>{status}</div>
-          <ol>{moves}</ol>
+        <div className={styles.game}>
+          <div className={styles.gameBoard}>
+            <Board squares={current.squares} onClick={(i) => handleClick(i)} />
+          </div>
+          <div className={styles.gameInfo}>
+            <div className={styles.status}>{status}</div>
+            <ol>{moves}</ol>
+          </div>
         </div>
       </div>
     </View>

@@ -2,6 +2,10 @@
   "routes": [
     {
       "path": "/",
+      "source": "pages/Home/index"
+    },
+    {
+      "path": "/gobang",
       "source": "pages/Gobang/index"
     }
   ],

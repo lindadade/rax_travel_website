@@ -1,6 +1,7 @@
 import { createElement, useEffect, useState } from 'rax';
 import styles from './index.module.css';
 import { routerLink } from '@/utils/index';
+import { history } from 'rax-app';
 
 function Header() {
   // 导航
@@ -60,6 +61,9 @@ function Header() {
             </div>
           );
         })}
+        <div className={styles.navLink} key="gobang" onClick={() => history.push('gobang')}>
+          Gobang
+        </div>
       </div>
       {/* navBtn */}
       <div className={styles.navBtn}>

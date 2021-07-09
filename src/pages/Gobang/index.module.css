@@ -1,4 +1,11 @@
-ol, ul {
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ol,
+ul {
   padding-left: 30px;
   font-size: 18px;
 }
