@@ -12,6 +12,7 @@ function Gobang() {
     },
   ]);
   const [xIsNext, setXIsNext] = useState(true);
+  const [sort, setSort] = useState(false);
   const [stepNumber, setStepNumber] = useState(0);
 
   const handleClick = (i: string | number) => {
@@ -45,6 +46,8 @@ function Gobang() {
     );
   });
 
+  sort && moves.reverse();
+
   // 当前棋盘
   const current = history[stepNumber];
   const winner = calculateWinner(current.squares);
@@ -61,7 +64,11 @@ function Gobang() {
   return (
     <View>
       <div c>
-        <div style={{ textAlign: 'center' }} className="button buttonPrimary buttonBig buttonNoRound" onClick={() => router.push('/')}>
+        <div
+          style={{ textAlign: 'center' }}
+          className="button buttonPrimary buttonBig buttonNoRound"
+          onClick={() => router.push('/')}
+        >
           返回旅游页面
         </div>
         <div className={styles.game}>
@@ -69,6 +76,13 @@ function Gobang() {
             <Board squares={current.squares} onClick={(i) => handleClick(i)} />
           </div>
           <div className={styles.gameInfo}>
+            <div
+              style={{ textAlign: 'center', width: '100px' }}
+              className="button buttonPrimary buttonNoBig buttonRound"
+              onClick={() => setSort(!sort)}
+            >
+              排序
+            </div>
             <div className={styles.status}>{status}</div>
             <ol>{moves}</ol>
           </div>
