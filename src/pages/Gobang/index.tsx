@@ -9,6 +9,7 @@ function Gobang() {
   const [history, setHistory] = useState([
     {
       squares: Array(9).fill(null),
+      nowKey: '',
     },
   ]);
   const [xIsNext, setXIsNext] = useState(true);
@@ -16,6 +17,7 @@ function Gobang() {
   const [stepNumber, setStepNumber] = useState(0);
 
   const handleClick = (i: string | number) => {
+    const nowKey = [(+i % 3) + 1, Math.floor((+i / 3)) + 1].join(',');
     const curHistory = history.slice(0, stepNumber + 1);
     const current = curHistory[curHistory.length - 1];
     const squares = [...current.squares];
@@ -23,7 +25,7 @@ function Gobang() {
       return;
     }
     squares[i] = xIsNext ? 'X' : 'O';
-    const historyTemp = [...curHistory, { squares }];
+    const historyTemp = [...curHistory, { squares, nowKey }];
     setHistory(historyTemp);
     setXIsNext(!xIsNext);
     setStepNumber(curHistory.length);
@@ -37,7 +39,7 @@ function Gobang() {
 
   // 历史记录
   const moves = history.map((step, move) => {
-    const desc = move ? `Go to move #${move}` : 'Go to game start';
+    const desc = move ? `Go to move #${move} \n Chess position: (${step.nowKey})` : 'Go to game start';
     const key = `move${move}`;
     return (
       <li key={key}>
