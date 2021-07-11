@@ -67,3 +67,7 @@ p {
 .color4 {
   color: #3af576;
 }
+.winner {
+  background: firebrick !important;
+  color: white;
+}

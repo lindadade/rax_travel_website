@@ -19,7 +19,7 @@ function Gobang() {
     const curHistory = history.slice(0, stepNumber + 1);
     const current = curHistory[curHistory.length - 1];
     const squares = [...current.squares];
-    if (calculateWinner(squares) || squares[i]) {
+    if (calculateWinner(squares)?.winner || squares[i]) {
       return;
     }
     squares[i] = xIsNext ? 'X' : 'O';
@@ -50,11 +50,14 @@ function Gobang() {
 
   // 当前棋盘
   const current = history[stepNumber];
-  const winner = calculateWinner(current.squares);
+  const calculate = calculateWinner(current.squares);
+  const winner = calculate?.winner;
+  let winSquare: number[] | undefined;
   let status: {} | null | undefined;
 
   if (winner) {
     status = `Winner: ${winner}`;
+    winSquare = calculate?.square;
   } else if (moves.length === 10) {
     status = 'Draw, start over game';
   } else {
@@ -73,7 +76,7 @@ function Gobang() {
         </div>
         <div className={styles.game}>
           <div className={styles.gameBoard}>
-            <Board squares={current.squares} onClick={(i) => handleClick(i)} />
+            <Board squares={current.squares} winner={winSquare} onClick={(i) => handleClick(i)} />
           </div>
           <div className={styles.gameInfo}>
             <div

@@ -40,7 +40,6 @@ function Header() {
       (event.srcElement ? event.srcElement.documentElement.scrollTop : false) ||
       window.pageYOffset ||
       (event.srcElement ? event.srcElement.body.scrollTop : 0);
-    window.console.log(scrollTop, scrollTop > 100);
     setState(() => scrollTop > 100);
   };
   return (
